@@ -1,7 +1,8 @@
 import { defineConfig, normalizePath } from 'vite'
-import react from '@vitejs/plugin-react'
+
 import path from "path";
 import autoprefixer from 'autoprefixer'
+import react from "@vitejs/plugin-react-swc";
 // https://vitejs.dev/config/
 const variablePath= normalizePath(path.resolve('./src/variable.scss'))
 //normalizePath是解决win mac路径的不同的
