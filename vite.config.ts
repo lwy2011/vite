@@ -3,6 +3,7 @@ import { defineConfig, normalizePath } from 'vite'
 import path from "path";
 import autoprefixer from 'autoprefixer'
 import react from "@vitejs/plugin-react-swc";
+import tailwindcss from 'tailwindcss'
 // https://vitejs.dev/config/
 const variablePath= normalizePath(path.resolve('./src/variable.scss'))
 //normalizePath是解决win mac路径的不同的
@@ -31,7 +32,8 @@ export default defineConfig({
           overrideBrowserslist:[
             'Chrome > 40','ff > 31','ie 11'
           ]
-        })
+        }),
+        tailwindcss({})
       ]
     }
   }
