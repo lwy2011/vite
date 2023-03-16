@@ -13,6 +13,10 @@ export default defineConfig({
         additionalData:`@import "${variablePath}";`
         //自动为每一个scss文件开头注入
       }
+    },
+    modules:{
+      generateScopedName:'[name]_[local]_[hash:base64:5]'
+      //name 文件名 local 类名，自定义module哈希值
     }
   }
 })
