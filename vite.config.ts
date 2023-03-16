@@ -7,7 +7,12 @@ import react from "@vitejs/plugin-react-swc";
 const variablePath= normalizePath(path.resolve('./src/variable.scss'))
 //normalizePath是解决win mac路径的不同的
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(
+    {
+      jsxImportSource:'@emotion/react',
+      //导入emotion
+    }
+  )],
   //css
   css:{
     preprocessorOptions:{
