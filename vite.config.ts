@@ -10,6 +10,9 @@ export default defineConfig({
       scss:{
         additionalData:`@import "${variablePath}";`
       }
+    },
+    modules:{
+      generateScopedName:'[name]_[local]_[hash:base64:5]'
     }
   }
 })
