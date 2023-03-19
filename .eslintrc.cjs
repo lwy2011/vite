@@ -24,7 +24,7 @@ module.exports = {
     'prettier/prettier': 'error',
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
-    'react/react-in-jsx-scope': 0
+    'react/react-in-jsx-scope': 'off'
   },
   settings: {
     react: {
