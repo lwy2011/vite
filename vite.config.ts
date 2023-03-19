@@ -3,9 +3,10 @@ import react from '@vitejs/plugin-react';
 import path from 'path';
 const variablePath = normalizePath(path.resolve('./src/variable.scss'));
 import autoprefixer from 'autoprefixer';
+import viteEslint from 'vite-plugin-eslint';
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [react(), viteEslint({ failOnError: false })],
   css: {
     preprocessorOptions: {
       scss: {
