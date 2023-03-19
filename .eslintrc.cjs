@@ -6,9 +6,11 @@ module.exports = {
   extends: [
     'eslint:recommended',
     'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:@typescript-eslint/recommended',
     'prettier',
-    'plugin:prettier/recommended'
+    'plugin:prettier/recommended',
+    'eslint-config-prettier'
   ],
   overrides: [],
   parser: '@typescript-eslint/parser',
@@ -22,6 +24,11 @@ module.exports = {
     'prettier/prettier': 'error',
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
-    'react/react-in-jsx-scope': 'off'
+    'react/react-in-jsx-scope': 0
+  },
+  settings: {
+    react: {
+      version: 'detect'
+    }
   }
 };
