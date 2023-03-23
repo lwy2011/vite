@@ -47,6 +47,10 @@
     "*.{js,jsx,tsx,ts}": [
       "pnpm run lint:script",
       "git add ."
+    ],
+    "**/*.{scss}":[
+      "pnpm run lint:style",
+      "git add ."
     ]
   }
 }
