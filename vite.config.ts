@@ -4,9 +4,14 @@ import path from 'path';
 const variablePath = normalizePath(path.resolve('./src/variable.scss'));
 import autoprefixer from 'autoprefixer';
 import viteEslint from 'vite-plugin-eslint';
+import viteStylelint from '@amatlash/vite-plugin-stylelint';
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), viteEslint({ failOnError: false })],
+  plugins: [
+    react(),
+    viteEslint({ failOnError: false }),
+    viteStylelint({ exclude: /windicss|node_modules/ })
+  ],
   css: {
     preprocessorOptions: {
       scss: {
