@@ -6,9 +6,11 @@ import viteEslint from 'vite-plugin-eslint';
 import viteStylelint from 'vite-plugin-stylelint';
 import svgr from 'vite-plugin-svgr';
 const variablePath = normalizePath(path.resolve('./src/variable.scss'));
-
+const isProduction = process.env.NODE_ENV === 'production';
+const CDN_URL = 'xxxxxx';
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: isProduction ? CDN_URL : '/',
   plugins: [
     react(),
     viteEslint({ failOnError: false }),
