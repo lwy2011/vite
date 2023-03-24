@@ -4,6 +4,7 @@ import path from 'path';
 import autoprefixer from 'autoprefixer';
 import viteEslint from 'vite-plugin-eslint';
 import viteStylelint from 'vite-plugin-stylelint';
+import svgr from 'vite-plugin-svgr';
 const variablePath = normalizePath(path.resolve('./src/variable.scss'));
 
 // https://vitejs.dev/config/
@@ -11,7 +12,8 @@ export default defineConfig({
   plugins: [
     react(),
     viteEslint({ failOnError: false }),
-    viteStylelint({ fix: true })
+    viteStylelint({ fix: true }),
+    svgr()
   ],
   css: {
     preprocessorOptions: {
