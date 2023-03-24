@@ -13,6 +13,17 @@ module.exports = {
     'stylelint-config-prettier',
     'stylelint-prettier/recommended'
   ],
+  ignoreFiles: [
+    '**/*.js',
+    '**/*.jsx',
+    '**/*.tsx',
+    '**/*.ts',
+    '**/*.json',
+    '**/*.md',
+    '**/*.yaml'
+  ],
+
+
   // 配置 rules
   rules: {
     // 开启 Prettier 自动格式化功能
